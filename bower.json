@@ -1,0 +1,11 @@
+{
+  "name": "underscore-before",
+  "version": "1.0.0",
+  "main": "underscore-before.js",
+  "dependencies": {
+    "underscore": "*"
+  },
+  "devDependencies": {
+    "jasmine": "*"
+  }
+}
