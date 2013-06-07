@@ -10,6 +10,14 @@
                 if (!func) return;
                 return func.apply(this, arguments);
             };
+        },
+        after: function(func, after) {
+            return function() {
+                var ret = func.apply(this, arguments);
+                if (!after) return ret;
+                after.apply(this, arguments);
+                return ret;
+            };
         }
     });
 
