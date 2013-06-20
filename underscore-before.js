@@ -1,8 +1,4 @@
 (function(){
-
-    /**
-     * Allow underscore use of partials
-     */
     _.mixin({
         before: function(before, func) {
             return function() {
