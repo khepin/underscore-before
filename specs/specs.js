@@ -40,7 +40,7 @@ describe("Underscore", function() {
             var first = function(){result += 'first';};
             var second = function(){result += 'second';};
 
-            var myFunction = _.after(first, second);
+            var myFunction = _.before.after(first, second);
 
             myFunction();
             expect(result).toBe('firstsecond');
@@ -52,7 +52,7 @@ describe("Underscore", function() {
             var first = function(a, b, c) { argsA = a + b + c;};
             var second = function(a, b, c) { argsB = c + b + a;};
 
-            var myFunction = _.after(first, second);
+            var myFunction = _.before.after(first, second);
             myFunction( 'un', 'deux', 'trois');
 
             expect(argsA).toBe('undeuxtrois');
@@ -63,7 +63,7 @@ describe("Underscore", function() {
             var first = function() {return 'I am first';};
             var second = function() {return 'I am second';};
 
-            var myFunction = _.after(first, second);
+            var myFunction = _.before.after(first, second);
 
             expect(myFunction()).toBe('I am first');
         });
